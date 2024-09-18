@@ -92,5 +92,3 @@ def welcome():
 @app.errorhandler(500)
 def internal_server_error(error):
     return jsonify({"error": "Internal Server Error", "details": str(error), "trace": traceback.format_exc()}), 500
-
-# Note: Remove the if __name__ == '__main__': block for Vercel deployment
