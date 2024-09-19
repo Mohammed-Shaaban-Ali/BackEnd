@@ -87,8 +87,12 @@ def process_image():
 
 @app.route('/')
 def welcome():
-    return "Welcome to my Flask API!"
+    return "Welcome to my Flask API!a"
 
 @app.errorhandler(500)
 def internal_server_error(error):
     return jsonify({"error": "Internal Server Error", "details": str(error), "trace": traceback.format_exc()}), 500
+
+
+if __name__ == '__main__':
+    app.run(debug=True)
